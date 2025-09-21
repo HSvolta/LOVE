@@ -35,7 +35,7 @@ h2 {
 .flower {
   position: absolute;
   bottom: -10vh;   /* Comienza debajo de la pantalla */
-  font-size: 2.5rem;
+  font-size: 10rem;
   animation: rise linear infinite;
   opacity: 0;
 }
@@ -60,3 +60,8 @@ h2 {
 .flower:nth-child(4) { left: 55%; animation-duration: 7s; animation-delay: 1s; }
 .flower:nth-child(5) { left: 75%; animation-duration: 9s; animation-delay: 3s; }
 .flower:nth-child(6) { left: 90%; animation-duration: 6.5s; animation-delay: 1.5s; }
+.flower:nth-child(7) { left: 1%; animation-duration: 6s; animation-delay: 0s; }
+.flower:nth-child(8) { left: 60%; animation-duration: 8s; animation-delay: 2s; }
+.flower:nth-child(9) { left: 90%; animation-duration: 7s; animation-delay: 1s; }
+.flower:nth-child(10) { left: 5%; animation-duration: 9s; animation-delay: 3s; }
+.flower:nth-child(11) { left: 15%; animation-duration: 6.5s; animation-delay: 1.5s; }
