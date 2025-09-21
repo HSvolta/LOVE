@@ -22,17 +22,15 @@
     <div class="flower">🌼</div>
     <div class="flower">🌷</div>
   </div>
+<!-- Botón interactivo -->
+<button id="playButton">▶️ Reproducir música</button>
 
-<!-- Botón pequeño y bonito para reproducir música -->
-<button id="playButton" onclick="document.getElementById('miAudio').play()">🎵 Reproducir música</button>
-
-<!-- Tu audio sin controles, en loop -->
+<!-- Audio oculto -->
 <audio id="miAudio" loop>
   <source src="audio/Vivir Junto a Ti.mp3" type="audio/mpeg">
 </audio>
 
 <style>
-  /* Estilo del botón */
   #playButton {
     background-color: #ff6f61;
     border: none;
@@ -42,16 +40,33 @@
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
-    position: fixed;      /* Botón flotante */
-    bottom: 20px;         /* Desde abajo */
-    right: 20px;          /* Desde la derecha */
-    z-index: 1000;        /* Encima de todo */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
   }
 
   #playButton:hover {
     background-color: #ff4a3a;
     transform: scale(1.1);
   }
+</style>
+
+<script>
+  const button = document.getElementById('playButton');
+  const audio = document.getElementById('miAudio');
+
+  button.addEventListener('click', () => {
+    if (audio.paused) {
+      audio.play();
+      button.textContent = "⏸️ Pausar música";
+    } else {
+      audio.pause();
+      button.textContent = "▶️ Reproducir música";
+    }
+  });
+</script>
+
 </style>
 </body>
 </html>
